@@ -1,12 +1,19 @@
-import react from "react";
-
 export const ChatMessage = (props) => {
 
-    const {text, uid, photoUrl, timePosted} = props.message;
+    const {text, uid, photoURL, timePosted} = props.message;
 
     console.log("message text: " + text);
 
     return (
-        <p style={{color: "black", fontSize: 100}}>{text}</p>
+        <div className="row justify-content-between">
+            <div className="col-1">
+                <img className="avatar" src={photoURL} alt="avatar"/>
+            </div>
+            <div className="col-10 message">
+                <p>{text}</p>
+            </div>
+            
+        </div>
+        
     )
 }
